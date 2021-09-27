@@ -17,7 +17,7 @@ namespace SamplesServer.Models
 
         public List<Comment> Comments { get; set; }
 
-        public Genre Genre { get; set; }
+        public string Genre { get; set; }
 
         public Book()
         {
