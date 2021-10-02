@@ -39,13 +39,14 @@ namespace SamplesServer
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => 
-                {
-                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "SamplesServer v1");
-                    c.RoutePrefix = string.Empty;
-                });
             }
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "SamplesServer v1");
+                c.RoutePrefix = string.Empty;
+            });
 
             app.UseRouting();
 
