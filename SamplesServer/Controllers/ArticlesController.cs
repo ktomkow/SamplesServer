@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 namespace SamplesServer.Controllers
 {
     [Route("[controller]")]
-    [ApiController]
-    public class ArticlesController : ControllerBase
+    public class ArticlesController : Controller
     {
         [HttpGet]
         [ProducesResponseType(200, Type = typeof(IEnumerable<Article>))]
@@ -57,6 +56,13 @@ namespace SamplesServer.Controllers
             };
 
             return Ok(result);
+        }
+
+        [HttpGet]
+        [Route("view")]
+        public IActionResult GetView()
+        {
+            return View();
         }
     }
 }
